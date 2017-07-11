@@ -44,4 +44,16 @@ public:
     }
 };
 ostream &operator<<(ostream& out,const complexNumber &c);
+
+//Plus operators
+complexNumber operator+(const complexNumber& c1,const complexNumber& c2);
+complexNumber operator+(const complexNumber& c1,double d);
+complexNumber operator+(double d, const complexNumber& c1);
+
+//Minus operators
+complexNumber operator-(const complexNumber& c1,const complexNumber& c2);
+complexNumber operator-(const complexNumber& c1,double d);
+complexNumber operator-(double d, const complexNumber& c1);
+
+
 #endif /* complexNumber_h */

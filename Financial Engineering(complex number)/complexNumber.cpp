@@ -16,6 +16,39 @@ ostream &operator<<(ostream& out,const complexNumber &c){
     out<<c.getReal()<<"+"<<c.getImaginary()<<"i"<<endl;
     return out;
 };
+
+//Specified the Plus operators
+complexNumber operator+(const complexNumber& c1,const complexNumber& c2){
+    
+    return complexNumber(c1.getReal()+c2.getReal(),c1.getImaginary()+c2.getImaginary());
+};
+
+complexNumber operator+(const complexNumber& c1,double d){
+    return complexNumber(c1.getReal()+d,c1.getImaginary());
+};
+complexNumber operator+(double d, const complexNumber& c1){
+    return complexNumber(d+c1.getReal(),c1.getImaginary());
+};
+
+
+
+//Specified Munus operators
+
+complexNumber operator-(const complexNumber& c1,const complexNumber& c2){
+    
+    return complexNumber(c1.getReal()-c2.getReal(),c1.getImaginary()-c2.getImaginary());
+};
+
+complexNumber operator-(const complexNumber& c1,double d){
+    return complexNumber(c1.getReal()-d,c1.getImaginary());
+};
+complexNumber operator-(double d, const complexNumber& c1){
+    return complexNumber(d-c1.getReal(),c1.getImaginary());
+};
+
+
+
+
 //this is the ordinary constructor with two arguments, which is real and imaginary value
 complexNumber::complexNumber(double real, double imaginary): real(real), imaginary(imaginary){
     
